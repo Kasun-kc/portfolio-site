@@ -42,7 +42,6 @@ export default function Hero() {
 
       {/* --- 2. Main Hero Content --- */}
       <main className="flex-grow flex flex-col justify-center px-6 sm:px-12 pt-28 pb-32 z-10">
-        {/* Initial loading entry animation for the main text area */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

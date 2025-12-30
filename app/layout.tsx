@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import FloatingNav from "@/components/FloatingNav";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.variable} font-sans bg-[#1d1c20] antialiased text-white`}>
         {children}
+        <FloatingNav />
       </body>
     </html>
   );

@@ -4,13 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TextRevealCard } from "@/components/ui/text-reveal-card";
-// import { BackgroundBeams } from "@/components/ui/background-beams"; // Removed due to missing module
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen w-full flex flex-col bg-[#1d1c20] overflow-hidden antialiased">
+    <section id="hero" className="sticky top-0 min-h-screen w-full flex flex-col bg-[#1d1c20] overflow-hidden antialiased">
+      {/* Background Beams Effect */}
+      <BackgroundBeams className="z-0" />
+
       {/* Standard Header Bar */}
-      <div className="w-full flex items-center justify-between px-6 py-6 sm:px-12 sm:py-8 z-20">
+      <div className="relative w-full flex items-center justify-between px-6 py-6 sm:px-12 sm:py-8 z-20">
         <Link href="/" className="relative w-14 h-7 sm:w-18 sm:h-9">
           <Image src="/logo.png" alt="KC Logo" fill className="object-contain" priority />
         </Link>
@@ -33,17 +36,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </main>
-
-      {/* Glass Floating Nav */}
-      <div className="fixed bottom-10 left-0 right-0 flex justify-center z-50 px-4 pointer-events-none">
-        <nav className="pointer-events-auto flex items-center gap-4 sm:gap-8 px-8 py-3.5 bg-white/[0.04] backdrop-blur-2xl rounded-full border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
-          {["HOME", "ABOUT", "SERVICES", "DESIGNS", "PROJECTS"].map((item) => (
-            <Link key={item} href={`#${item.toLowerCase()}`} className="text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-neutral-400 hover:text-white transition-colors uppercase">
-              {item}
-            </Link>
-          ))}
-        </nav>
-      </div>
     </section>
   );
 }

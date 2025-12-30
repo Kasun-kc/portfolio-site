@@ -1,0 +1,25 @@
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+/** @type {import('tailwindcss').Config} */
+
+module.exports = {
+  // ... rest of your config
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-poppins)", "sans-serif"],
+      },
+       // ... rest of theme extend
+    },
+  },
+  // ... plugins etc
+}

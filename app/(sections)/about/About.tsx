@@ -58,7 +58,7 @@ export default function About() {
             <p className="text-white text-sm sm:text-base lg:text-lg mb-2 sm:mb-3">
               I bring together :
             </p>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight min-h-[1.2em]">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal tracking-tight min-h-[1.2em]">
               <TypeWriter
                 words={[
                   "Design thinking",

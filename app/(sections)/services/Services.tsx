@@ -19,7 +19,7 @@ export default function Services() {
     return (
         <section
             id="services"
-            className="relative w-full bg-[#e8e8e8] py-20 sm:py-32 px-6 sm:px-12 lg:px-24 -mt-20 z-20"
+            className="relative w-full bg-[#e8e8e8] py-20 sm:py-32 px-6 sm:px-12 lg:px-24 -mt-20 z-20 overflow-clip"
         >
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
@@ -47,7 +47,7 @@ export default function Services() {
                             onMouseLeave={() => setHoveredService(null)}
                         >
                             {/* Service Title */}
-                            <h2 className="relative z-10 text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-black leading-tight tracking-tight text-center cursor-pointer transition-opacity duration-300 hover:opacity-80 whitespace-nowrap px-4">
+                            <h2 className="relative z-10 text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-black leading-tight tracking-tight text-center cursor-pointer transition-opacity duration-300 whitespace-nowrap px-4 py-6">
                                 {service.title}
                             </h2>
 
@@ -55,19 +55,17 @@ export default function Services() {
                             <AnimatePresence>
                                 {hoveredService === index && (
                                     <motion.div
-                                        initial={{ scaleX: 0, opacity: 0 }}
-                                        animate={{ scaleX: 1, opacity: 1 }}
-                                        exit={{ scaleX: 0, opacity: 0 }}
-                                        transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-                                        className="absolute bg-black overflow-hidden origin-center flex items-center justify-center"
+                                        initial={{ scaleY: 0, opacity: 0 }}
+                                        animate={{ scaleY: 1, opacity: 1 }}
+                                        exit={{ scaleY: 0, opacity: 0 }}
+                                        transition={{ duration: 0.4, ease: "easeOut" }}
+                                        className="absolute inset-0 bg-black overflow-hidden flex items-center justify-center z-50"
                                         style={{
-                                            left: 0,
-                                            top: '50%',
-                                            transform: 'translateY(-50%)',
                                             width: '100vw',
-                                            marginLeft: 'calc(-1 * (100vw - 100%) / 2)',
-                                            height: '120px',
-                                            zIndex: 9999
+                                            left: '50%',
+                                            right: '50%',
+                                            marginLeft: '-50vw',
+                                            marginRight: '-50vw'
                                         }}
                                     >
                                         <div className="flex whitespace-nowrap animate-scroll-fast">
@@ -107,7 +105,7 @@ export default function Services() {
         }
 
         .animate-scroll-fast {
-          animation: scroll-fast 12s linear infinite;
+          animation: scroll-fast 30s linear infinite;
         }
       `}</style>
         </section>

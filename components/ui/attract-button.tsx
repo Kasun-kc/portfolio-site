@@ -96,7 +96,7 @@ export default function AttractButton({
                 />
             ))}
             <span className="relative flex w-full items-center justify-center gap-2">
-                {children || "RESUME"}
+                {isAttracting ? "DOWNLOAD" : (children || "RESUME")}
             </span>
         </button>
     );

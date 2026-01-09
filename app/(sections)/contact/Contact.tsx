@@ -49,7 +49,7 @@ export default function Contact() {
     };
 
     const socialLinks = [
-        { icon: "/Linkedin.png", url: "https://www.linkedin.com/in/kasun-herath-70835a24a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", label: "LinkedIn" },
+        { icon: "/Linkedin.png", url: "https://www.linkedin.com/in/kasun-kc", label: "LinkedIn" },
         { icon: "/Behance.png", url: "https://www.behance.net/KC_herath", label: "Behance" },
         { icon: "/Github.png", url: "https://github.com/Kasun-kc", label: "GitHub" },
         { icon: "/Facebook.png", url: "https://www.facebook.com/share/1FGV3R2jip/", label: "Facebook" },

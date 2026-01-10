@@ -6,10 +6,10 @@ export default function Designs() {
     // Placeholder design data - replace with your actual designs and Behance links
     const designData = [
         {
-            title: "TO-DO APP",
+            title: "Dungen & Dragons, 2D game UI",
             button: "EXPLORE DESIGN",
-            src: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=2944&auto=format&fit=crop",
-            link: "https://www.behance.net/" // Replace with your Behance link
+            src: "/Designs/D&D.png",
+            link: "https://www.behance.net/gallery/241828951/AI-Driven-NPC-Interaction-Game-UI-Design" // Replace with your Behance link
         },
         {
             title: "E-COMMERCE APP",
@@ -27,12 +27,6 @@ export default function Designs() {
             title: "PORTFOLIO WEBSITE",
             button: "EXPLORE DESIGN",
             src: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2836&auto=format&fit=crop",
-            link: "https://www.behance.net/" // Replace with your Behance link
-        },
-        {
-            title: "MOBILE BANKING APP",
-            button: "EXPLORE DESIGN",
-            src: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2874&auto=format&fit=crop",
             link: "https://www.behance.net/" // Replace with your Behance link
         },
     ];

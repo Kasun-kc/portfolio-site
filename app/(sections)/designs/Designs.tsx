@@ -14,7 +14,7 @@ export default function Designs() {
         {
             title: "E-COMMERCE APP",
             button: "EXPLORE DESIGN",
-            src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+            src: "/Designs/Portfolio.png",
             link: "https://www.behance.net/" // Replace with your Behance link
         },
         {

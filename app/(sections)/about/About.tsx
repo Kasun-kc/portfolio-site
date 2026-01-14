@@ -6,6 +6,15 @@ import { TypeWriter } from "@/components/ui/type-writer";
 import AttractButton from "@/components/ui/attract-button";
 
 export default function About() {
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Kasun_Herath_UIUX_Intern_Resume.pdf';
+    link.download = 'Kasun_Herath_UIUX_Intern_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="about" className="relative w-full bg-[#000000] py-16 sm:py-20 px-6 sm:px-12 lg:px-24 rounded-t-[50px] sm:rounded-t-[100px] -mt-20 z-30 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
@@ -76,7 +85,7 @@ export default function About() {
 
           {/* Resume Button with Attract Effect - Aligned Right */}
           <div className="flex justify-end">
-            <AttractButton particleCount={15} />
+            <AttractButton particleCount={15} onClick={handleDownloadResume} />
           </div>
         </motion.div>
       </div>

@@ -60,12 +60,12 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="relative w-full bg-[#2B2F31] py-20 sm:py-32 min-h-screen flex flex-col items-center justify-center"
+            className="relative w-full bg-[#2B2F31] py-12 sm:py-20 md:py-32 min-h-screen flex flex-col items-center justify-center"
         >
-            <div className="max-w-7xl mx-auto w-full px-6 sm:px-12 lg:px-24">
+            <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-12 lg:px-24">
                 {/* Header */}
                 <div className="mb-12">
-                    <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-white tracking-tight mb-6">
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight mb-6">
                         LET'S CONNECT
                     </h1>
                     <p className="text-gray-300 text-base sm:text-lg max-w-2xl">
@@ -74,7 +74,7 @@ export default function Contact() {
                 </div>
 
                 {/* Two Column Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 mt-12 sm:mt-16">
                     {/* Left Column - Contact Form */}
                     <div className="space-y-6">
                         <form onSubmit={handleSubmit} className="space-y-6">
@@ -85,7 +85,7 @@ export default function Contact() {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-6 py-4 bg-[#6B6B6B] text-white placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/20 transition-all"
+                                className="w-full px-4 py-3 sm:px-6 sm:py-4 bg-[#6B6B6B] text-white placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/20 transition-all"
                             />
                             <input
                                 type="email"
@@ -94,7 +94,7 @@ export default function Contact() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-6 py-4 bg-[#6B6B6B] text-white placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/20 transition-all"
+                                className="w-full px-4 py-3 sm:px-6 sm:py-4 bg-[#6B6B6B] text-white placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/20 transition-all"
                             />
                             <input
                                 type="tel"
@@ -102,7 +102,7 @@ export default function Contact() {
                                 placeholder="Phone Number"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                className="w-full px-6 py-4 bg-[#6B6B6B] text-white placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/20 transition-all"
+                                className="w-full px-4 py-3 sm:px-6 sm:py-4 bg-[#6B6B6B] text-white placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/20 transition-all"
                             />
                             <textarea
                                 name="message"
@@ -111,7 +111,7 @@ export default function Contact() {
                                 onChange={handleChange}
                                 required
                                 rows={5}
-                                className="w-full px-6 py-4 bg-[#6B6B6B] text-white placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/20 transition-all resize-none"
+                                className="w-full px-4 py-3 sm:px-6 sm:py-4 bg-[#6B6B6B] text-white placeholder-gray-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-white/20 transition-all resize-none"
                             />
                             <button
                                 type="submit"
@@ -138,7 +138,7 @@ export default function Contact() {
                     {/* Right Column - Contact Info */}
                     <div className="flex flex-col">
                         <div className="space-y-1">
-                            <h3 className="text-4xl sm:text-5xl font-bold text-white mb-2">
+                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
                                 Kasun Herath
                             </h3>
                             <p className="text-white text-lg">
@@ -156,7 +156,7 @@ export default function Contact() {
                         </div>
 
                         {/* Social Media Icons - 3x2 Grid */}
-                        <div className="grid grid-cols-3 gap-4 max-w-xs mt-12">
+                        <div className="grid grid-cols-3 gap-3 sm:gap-4 max-w-xs mt-12">
                             {socialLinks.map((social, index) => (
                                 <motion.a
                                     key={index}
@@ -164,7 +164,7 @@ export default function Contact() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={social.label}
-                                    className="relative w-16 h-16 hover:scale-110 transition-transform duration-300"
+                                    className="relative w-12 h-12 sm:w-16 sm:h-16 hover:scale-110 transition-transform duration-300"
                                     animate={{
                                         y: [0, -10, 0],
                                     }}

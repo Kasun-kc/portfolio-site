@@ -16,7 +16,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="relative w-full bg-[#000000] py-16 sm:py-20 px-6 sm:px-12 lg:px-24 rounded-t-[50px] sm:rounded-t-[100px] -mt-20 z-30 min-h-screen flex items-center">
+    <section id="about" className="relative w-full bg-[#000000] py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 lg:px-24 rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[100px] -mt-20 z-30 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
         {/* Left Side - Illustration */}
         <motion.div
@@ -24,7 +24,7 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-[48%] relative h-[450px] sm:h-[550px] md:h-[650px] lg:h-[750px] flex items-center justify-center"
+          className="w-full md:w-[48%] relative h-[300px] sm:h-[400px] md:h-[550px] lg:h-[650px] xl:h-[750px] flex items-center justify-center"
         >
           <div className="relative w-full h-full max-w-[700px]">
             <Image
@@ -51,7 +51,7 @@ export default function About() {
           </h4>
 
           {/* Name */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
             I'm <span className="text-[#4AA0D5]">Kasun Herath</span>
           </h2>
 
@@ -67,7 +67,7 @@ export default function About() {
             <p className="text-white text-sm sm:text-base lg:text-lg mb-2 sm:mb-3">
               I bring together :
             </p>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-normal tracking-tight min-h-[1.2em]">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal tracking-tight min-h-[1.2em]">
               <TypeWriter
                 words={[
                   "Design thinking",

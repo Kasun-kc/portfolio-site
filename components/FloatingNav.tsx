@@ -4,6 +4,20 @@ import Link from "next/link";
 
 export default function FloatingNav() {
     const [isVisible, setIsVisible] = useState(true);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+    // Detect touch devices - hide FloatingNav on mobile
+    useEffect(() => {
+        const checkTouch = () => {
+            const hasTouch = (
+                ('ontouchstart' in window && navigator.maxTouchPoints > 0) ||
+                (navigator.maxTouchPoints > 1)
+            );
+            setIsTouchDevice(hasTouch);
+        };
+
+        checkTouch();
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -24,7 +38,8 @@ export default function FloatingNav() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    if (!isVisible) return null;
+    // Hide on touch devices (mobile) - only show on desktop
+    if (!isVisible || isTouchDevice) return null;
 
     return (
         <div className="fixed bottom-10 left-0 right-0 flex justify-center z-[9999] px-4 pointer-events-none">
@@ -32,7 +47,7 @@ export default function FloatingNav() {
                 {["HOME", "ABOUT", "SERVICES", "DESIGNS", "PROJECTS", "CONTACT"].map((item) => (
                     <Link
                         key={item}
-                        href={`#${item.toLowerCase()}`}
+                        href={item === "HOME" ? "#" : `#${item.toLowerCase()}`}
                         className="text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-neutral-400 hover:text-white transition-colors uppercase"
                     >
                         {item}

@@ -47,7 +47,7 @@ export default function Projects() {
             content: (
                 <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-indigo-50 to-teal-50 rounded-2xl overflow-hidden">
                     <Image
-                        src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2940&auto=format&fit=crop"
+                        src="/Projects/AI-Powered Career Guidance System.png"
                         width={500}
                         height={450}
                         className="h-full w-full object-cover"
@@ -93,7 +93,7 @@ export default function Projects() {
     return (
         <section
             id="projects"
-            className="relative w-full bg-white py-20 sm:py-32 min-h-screen flex flex-col items-center justify-center"
+            className="relative w-full bg-white py-12 sm:py-20 md:py-32 min-h-screen flex flex-col items-center justify-center"
         >
             {/* Title */}
             <h4 className="text-[#6b6b6b] font-semibold tracking-[0.15em] uppercase text-sm text-center mb-16 sm:mb-20">
@@ -101,7 +101,7 @@ export default function Projects() {
             </h4>
 
             {/* Sticky Scroll Container */}
-            <div className="w-full max-w-7xl mx-auto px-4">
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <StickyScroll content={projects} />
             </div>
         </section>

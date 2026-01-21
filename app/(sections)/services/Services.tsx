@@ -19,7 +19,7 @@ export default function Services() {
     return (
         <section
             id="services"
-            className="relative w-full bg-[#e8e8e8] py-20 sm:py-32 px-6 sm:px-12 lg:px-24 -mt-20 z-20 overflow-clip"
+            className="relative w-full bg-[#e8e8e8] py-12 sm:py-20 md:py-32 px-4 sm:px-6 md:px-12 lg:px-24 -mt-20 z-20 overflow-clip"
         >
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
@@ -47,7 +47,7 @@ export default function Services() {
                             onMouseLeave={() => setHoveredService(null)}
                         >
                             {/* Service Title */}
-                            <h2 className="relative z-10 text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-black leading-tight tracking-tight text-center cursor-pointer transition-opacity duration-300 whitespace-nowrap px-4 py-6">
+                            <h2 className="relative z-10 text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-black leading-tight tracking-tight text-center cursor-pointer transition-opacity duration-300 whitespace-nowrap px-2 sm:px-4 py-4 sm:py-6">
                                 {service.title}
                             </h2>
 
@@ -74,7 +74,7 @@ export default function Services() {
                                                 <div key={i} className="flex items-center">
                                                     {service.details.map((detail, idx) => (
                                                         <React.Fragment key={`${i}-${idx}`}>
-                                                            <span className="text-white text-base sm:text-lg lg:text-xl font-normal tracking-wider uppercase px-8">
+                                                            <span className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-normal tracking-wider uppercase px-6 sm:px-8">
                                                                 {detail}
                                                             </span>
                                                             {idx < service.details.length - 1 && (

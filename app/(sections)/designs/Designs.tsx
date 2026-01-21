@@ -12,15 +12,15 @@ export default function Designs() {
             link: "https://www.behance.net/gallery/241828951/AI-Driven-NPC-Interaction-Game-UI-Design" // Replace with your Behance link
         },
         {
-            title: "E-COMMERCE APP",
+            title: "AutoCare – Garage Finder & Vehicle Assistance App",
             button: "EXPLORE DESIGN",
-            src: "/Designs/Portfolio.png",
-            link: "https://www.behance.net/" // Replace with your Behance link
+            src: "/Designs/autocare.png",
+            link: "https://www.behance.net/gallery/242656421/AutoCare-Garage-Finder-Vehicle-Assistance-App" // Replace with your Behance link
         },
         {
             title: "SOCIAL MEDIA APP",
             button: "EXPLORE DESIGN",
-            src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2874&auto=format&fit=crop",
+            src: "/Designs/Portfolio.png",
             link: "https://www.behance.net/" // Replace with your Behance link
         },
         {
@@ -34,7 +34,7 @@ export default function Designs() {
     return (
         <section
             id="designs"
-            className="relative w-full bg-black py-20 sm:py-32 min-h-screen flex flex-col items-center justify-center"
+            className="relative w-full bg-black py-12 sm:py-20 md:py-32 min-h-screen flex flex-col items-center justify-center"
         >
             {/* Title */}
             <h4 className="text-[#6b6b6b] font-semibold tracking-[0.15em] uppercase text-sm text-center mb-16 sm:mb-20">

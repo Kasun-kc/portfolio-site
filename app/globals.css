@@ -8,3 +8,7 @@
   --background: #1d1c20;
   --foreground: #ffffff;
 }
+
+* {
+  scroll-behavior: smooth;
+}
